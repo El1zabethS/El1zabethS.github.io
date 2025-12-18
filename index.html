@@ -3,6 +3,7 @@
 
 <head>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   <script src="header.js" defer></script>
 </head>
 
@@ -12,9 +13,12 @@
   <main>
     <section class="hero">
       <div class="portrait-container">
+        <!-- Background Elements (Mountains) -->
         <img src="Assets/mountains.png" alt="Mountains Left" class="mountains-bg mountains-left" />
         <img src="Assets/mountains.png" alt="Mountains Right" class="mountains-bg mountains-right" />
-        <div class="mountains-cover"></div>
+        <div class="mountains-cover"></div> <!-- Semi-circle cover to blend bottom -->
+
+        <!-- Rotating Text Circle -->
         <svg viewBox="0 0 500 500" class="circle-text">
           <defs>
             <path id="circlePath" d="M250,250 m-170,0 a170,170 0 1,1 340,0 a170,170 0 1,1 -340,0" />
@@ -25,8 +29,57 @@
             </textPath>
           </text>
         </svg>
+
+        <!-- Main Portrait Image -->
         <img src="Assets/SeniorPicture.jpg" alt="Elizabeth Seaton" class="portrait" />
       </div>
+
+      <!-- 
+        Tech Stack Carousel 
+        This is a full-width container with a dark gray background.
+        The track inside scrolls infinitely using CSS animations.
+      -->
+      <div class="tech-stack-container">
+        <div class="tech-stack-track">
+          <!-- 
+             We repeat the icon set 3 times to create a seamless infinite loop.
+             When the first set scrolls out of view, the duplicate set takes its place perfectly,
+             and the animation resets instantly at -33.33% (1/3 of total width).
+          -->
+
+          <!-- Original Set -->
+          <i class="devicon-matlab-plain"></i>
+          <i class="devicon-git-plain"></i>
+          <i class="devicon-java-plain"></i>
+          <i class="devicon-python-plain"></i>
+          <i class="devicon-javascript-plain"></i>
+          <i class="devicon-css3-plain"></i>
+          <i class="devicon-solidworks-plain"></i>
+          <i class="devicon-salesforce-plain" title="Onshape (Placeholder)"></i>
+
+          <!-- Duplicate Set -->
+          <i class="devicon-matlab-plain"></i>
+          <i class="devicon-git-plain"></i>
+          <i class="devicon-java-plain"></i>
+          <i class="devicon-python-plain"></i>
+          <i class="devicon-javascript-plain"></i>
+          <i class="devicon-css3-plain"></i>
+          <i class="devicon-solidworks-plain"></i>
+          <i class="devicon-salesforce-plain" title="Onshape (Placeholder)"></i>
+
+          <!-- Triple Set (Buffer) -->
+          <i class="devicon-matlab-plain"></i>
+          <i class="devicon-git-plain"></i>
+          <i class="devicon-java-plain"></i>
+          <i class="devicon-python-plain"></i>
+          <i class="devicon-javascript-plain"></i>
+          <i class="devicon-css3-plain"></i>
+          <i class="devicon-solidworks-plain"></i>
+          <i class="devicon-salesforce-plain" title="Onshape (Placeholder)"></i>
+        </div>
+      </div>
+
+      <div class="welcome-banner">Who Am I</div>
     </section>
   </main>
 </body>

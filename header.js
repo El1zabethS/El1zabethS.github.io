@@ -1,18 +1,27 @@
 
-// Function to render the header and navigation
-function renderHeader() {
-  const isRoot = window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/');
-  const weirdPath = window.location.pathname.split('/').pop() === 'El1zabethS.github.io'; // Handle repo root edge case if needed, though 'endsWith' usually suffices.
+// ======================================
+// DYNAMIC HEADER RENDERER
+// ======================================
+// This Function injects the header HTML into any page that calls it.
+// It automatically detects the current directory level to fix links (../ vs ./)
+// and highlights the correct active navigation item.
 
-  // Determine relative path for links
+function renderHeader() {
+  // Check if we are on the root index page
+  const isRoot = window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/');
+
+  // Set the base path for links. 
+  // If we are in a subfolder (like ProjectsPage), we need to go up one level (../).
+  // If we are on root, we stay here.
   const basePath = isRoot ? '' : '../';
 
-  // Determine current page for active state
+  // Determine current page for styling the "active" link
   const path = window.location.pathname;
   const isExperience = path.includes('experience.html');
   const isProjects = path.includes('projects.html');
   const isHome = path.includes('index.html') || path.endsWith('/');
 
+  // Template literal for the Header HTML
   const headerHTML = `
   <header>
     <div class="header-left">
@@ -27,6 +36,7 @@ function renderHeader() {
 
   <nav>
     <ul>
+      <!-- Links use basePath variable to ensure they work from any folder -->
       <li><a href="${basePath}index.html" class="${isHome ? 'active' : ''}">Home</a></li>
       <li><a href="${basePath}ExperiencePage/experience.html" class="${isExperience ? 'active' : ''}">Experience</a></li>
       <li><a href="${basePath}ProjectsPage/projects.html" class="${isProjects ? 'active' : ''}">Projects</a></li>
@@ -34,14 +44,14 @@ function renderHeader() {
   </nav>
   `;
 
+  // Inject the HTML into the placeholder div
   const placeholder = document.getElementById('header-placeholder');
   if (placeholder) {
     placeholder.innerHTML = headerHTML;
   }
 }
 
-// Run functions when DOM is loaded
+// Ensure DOM is loaded before running
 document.addEventListener('DOMContentLoaded', () => {
   renderHeader();
 });
-
