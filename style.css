@@ -1,7 +1,5 @@
 /* This is the header for the Home Page. 
 It should be the same from page to page
-TODO: Ensure consistency across all pages by using the same header style.
-TODO: Make scalable for different screen sizes
 */
 .header-right {
   text-align: center;
@@ -10,7 +8,9 @@ TODO: Make scalable for different screen sizes
   padding: 0em 0em;
   margin-top: -0.5em;
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300&display=swap');
+
 body {
   margin: 0;
   font-family: 'Bricolage Grotesque', sans-serif;
@@ -28,14 +28,17 @@ header {
   padding: 3em 6em;
   flex-wrap: wrap;
 }
+
 .new-bold {
   font-size: 4em;
   font-weight: bold;
   line-height: 1.1;
 }
+
 .header-left h1 {
   margin: 0;
 }
+
 .header-left .seaton {
   display: block;
   text-indent: 4em;
@@ -46,11 +49,11 @@ nav {
   display: flex;
   justify-content: flex;
   font-family: 'Bricolage Grotesque', sans-serif;
-  position: absolute; 
+  position: absolute;
   top: 200px;
   left: 30%;
   width: 70%;
-  z-index: 10; 
+  z-index: 10;
   padding: 3rem 4rem;
 }
 
@@ -62,7 +65,7 @@ nav ul {
   gap: 3em;
   margin: 0;
   padding: 0;
-  
+
 }
 
 nav a {
@@ -141,7 +144,7 @@ text {
 }
 
 .portrait {
-  position: absolute; 
+  position: absolute;
   width: 800px;
   height: 800px;
   border-radius: 50%;
@@ -186,20 +189,25 @@ text {
 
 .welcome-banner {
   width: 95%;
-  height: 119px; /* Same as .mountains-cover */
-  background: none; /* No background color */
-  color: #2d4d8b;   /* Text color as requested */
+  height: 119px;
+  /* Same as .mountains-cover */
+  background: none;
+  /* No background color */
+  color: #2d4d8b;
+  /* Text color as requested */
   display: flex;
   align-items: center;
   justify-content: center;
   white-space: nowrap;
-  font-size: 42em; /* Adjust as needed for visual balance */
+  font-size: 42em;
+  /* Adjust as needed for visual balance */
   font-weight: bold;
   letter-spacing: -0.13em;
   position: absolute;
   left: 0;
   bottom: 0;
-  z-index: 200; /* Above .mountains-cover */
+  z-index: 200;
+  /* Above .mountains-cover */
   text-transform: uppercase;
   pointer-events: none;
 }
@@ -208,6 +216,3 @@ text {
 
 Finally into important information lol
 */
-
-
-

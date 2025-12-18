@@ -1,54 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Elizabeth Seaton</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Verdana&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=New+Tegomin:wght@700&display=swap" rel="stylesheet">
-  <script src="script.js" defer></script>
+  <script src="header.js" defer></script>
 </head>
+
 <body>
-  <header>
-    <div class="header-left">
-      <h1 class="new-bold">ELIZABETH<br><span class="seaton">SEATON</span></h1>
-    </div>
-    <div class="header-right">
-      <p><a href="tel:6023771293" class="contact-link">602 - 377 - 1293</a></p>
-      <p><a href="mailto:elizabeth.seaton35@gmail.com" class="contact-link">elizabeth.seaton35@gmail.com</a></p>
-      <p>Chandler AZ 85224</p>
-    </div>
-  </header>
+  <div id="header-placeholder"></div>
 
-  <nav>
-    <ul>
-      <li><a class="active" href="index.html">Home</a></li>
-      <li><a href="../ExperiencePage/experience.html">Experience</a></li>
-      <li><a href="../ProjectsPage/projects.html">Projects</a></li>
-    </ul>
-  </nav>
-
-<main>
-  <section class="hero">
-    <div class="portrait-container">
-      <img src="Assets/mountains.png" alt="Mountains Left" class="mountains-bg mountains-left" />
-      <img src="Assets/mountains.png" alt="Mountains Right" class="mountains-bg mountains-right" />
-      <div class="mountains-cover"></div>
-      <div class="welcome-banner">Who Am I</div>
-      <svg viewBox="0 0 500 500" class="circle-text">
-        <defs>
-          <path id="circlePath" d="M250,250 m-170,0 a170,170 0 1,1 340,0 a170,170 0 1,1 -340,0" />
-        </defs>
-        <text font-size="36" >
-          <textPath href="#circlePath" startOffset="0%" textLength="210%">
-            Elizabeth Seaton Elizabeth Seaton Elizabeth Seaton
-          </textPath>
-        </text>
-      </svg>
-      <img src="Assets/SeniorPicture.jpg" alt="Elizabeth Seaton" class="portrait" />
-    </div>
-  </section>
-</main>
+  <main>
+    <section class="hero">
+      <div class="portrait-container">
+        <img src="Assets/mountains.png" alt="Mountains Left" class="mountains-bg mountains-left" />
+        <img src="Assets/mountains.png" alt="Mountains Right" class="mountains-bg mountains-right" />
+        <div class="mountains-cover"></div>
+        <svg viewBox="0 0 500 500" class="circle-text">
+          <defs>
+            <path id="circlePath" d="M250,250 m-170,0 a170,170 0 1,1 340,0 a170,170 0 1,1 -340,0" />
+          </defs>
+          <text font-size="36">
+            <textPath href="#circlePath" startOffset="0%" textLength="210%">
+              Elizabeth Seaton Elizabeth Seaton Elizabeth Seaton
+            </textPath>
+          </text>
+        </svg>
+        <img src="Assets/SeniorPicture.jpg" alt="Elizabeth Seaton" class="portrait" />
+      </div>
+    </section>
+  </main>
 </body>
+
 </html>
